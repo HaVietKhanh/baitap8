@@ -2,7 +2,7 @@ package com.vti.testing.controller;
 
 import com.vti.testing.dto.AccountDTO;
 import com.vti.testing.entity.Account;
-import com.vti.testing.form.AccountFilter;
+import com.vti.testing.filter.AccountFilter;
 import com.vti.testing.form.CreatingAccountForm;
 import com.vti.testing.form.UpdatingAccountForm;
 import com.vti.testing.service.IAccountService;
@@ -12,12 +12,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.web.PageableDefault;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -50,6 +48,9 @@ public class AccountController {
     public void updateAccount(@PathVariable(name = "id")  int id, @RequestBody @Valid UpdatingAccountForm form){
         form.setId(id);
         accountService.updateAccount(form);
-
+    }
+    @GetMapping(value = "/{id}")
+    public AccountDTO getAccountById(@PathVariable(name = "id")int id){
+        return modelMapper.map(accountService.getAccountById(id),AccountDTO.class);
     }
 }

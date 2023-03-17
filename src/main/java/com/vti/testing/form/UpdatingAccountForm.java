@@ -13,7 +13,7 @@ import javax.validation.constraints.Positive;
 @Data
 @NoArgsConstructor
 public class UpdatingAccountForm {
-    private Integer id;
+    private int id;
     @NotBlank(message = "{Account.createAccount.form.username.NotBlank}")
     @AccountUsernameNotExists
     private String userName;
@@ -24,8 +24,7 @@ public class UpdatingAccountForm {
     private String lastName;
 
     private String password;
-//    @Pattern(regexp = "ADMIN|EMPLOYEE|MANAGER")
     private Role role;
     @Positive   // tác dụng là yêu cầu DepartmentId là số dương lớn hơn 0
-    private Integer departmentId;
+    private int departmentId;
 }

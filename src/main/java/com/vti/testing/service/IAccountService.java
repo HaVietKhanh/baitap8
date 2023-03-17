@@ -1,14 +1,12 @@
 package com.vti.testing.service;
 
 import com.vti.testing.entity.Account;
-import com.vti.testing.form.AccountFilter;
+import com.vti.testing.filter.AccountFilter;
 import com.vti.testing.form.CreatingAccountForm;
 import com.vti.testing.form.UpdatingAccountForm;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.security.core.userdetails.UserDetailsService;
-
-import java.util.List;
 
 public interface IAccountService extends UserDetailsService {
 
@@ -23,4 +21,5 @@ public interface IAccountService extends UserDetailsService {
     void deleteAccount(int id);
 
     void updateAccount(UpdatingAccountForm form);
+    Account getAccountById(int id);
 }

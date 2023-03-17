@@ -25,5 +25,5 @@ public class CreatingAccountForm {
     @Pattern(regexp = "ADMIN|EMPLOYEE|MANAGER")
     private Role role;
     @Positive   // tác dụng là yêu cầu DepartmentId là số dương lớn hơn 0
-    private Integer departmentId;
+    private int departmentId;
 }

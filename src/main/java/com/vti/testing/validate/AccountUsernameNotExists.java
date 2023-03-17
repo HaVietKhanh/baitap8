@@ -15,7 +15,7 @@ import static java.lang.annotation.ElementType.PARAMETER;
 @Retention(RetentionPolicy.RUNTIME)
 @Constraint(validatedBy = AccountUsernameNotExistValidator.class)
 public @interface AccountUsernameNotExists {
-    String message() default "{Account.createAccount.form.username.NotExists}";
+        String message() default "{Account.createAccount.form.username.NotExists}";
 
     Class<?>[] groups() default { };
 

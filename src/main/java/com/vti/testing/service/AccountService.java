@@ -2,8 +2,7 @@ package com.vti.testing.service;
 
 import com.vti.testing.entity.Account;
 
-import com.vti.testing.entity.Department;
-import com.vti.testing.form.AccountFilter;
+import com.vti.testing.filter.AccountFilter;
 import com.vti.testing.form.CreatingAccountForm;
 import com.vti.testing.form.UpdatingAccountForm;
 import com.vti.testing.repository.IAccountRepository;
@@ -22,8 +21,6 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-
-import java.util.Objects;
 
 @Service
 public class AccountService implements IAccountService {
@@ -86,6 +83,11 @@ public class AccountService implements IAccountService {
     @Override
     public void updateAccount(UpdatingAccountForm form) {
 accountRepository.save(modelMapper.map(form,Account.class));
+    }
+
+    @Override
+    public Account getAccountById(int id) {
+        return accountRepository.findAllById(id);
     }
 
 }

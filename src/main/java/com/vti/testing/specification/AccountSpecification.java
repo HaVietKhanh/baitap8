@@ -1,7 +1,7 @@
 package com.vti.testing.specification;
 
 import com.vti.testing.entity.Account;
-import com.vti.testing.form.AccountFilter;
+import com.vti.testing.filter.AccountFilter;
 import lombok.AllArgsConstructor;
 import org.springframework.data.jpa.domain.Specification;
 

@@ -1,11 +1,8 @@
 package com.vti.testing.controller;
 
-import com.vti.testing.dto.AccountDTO;
 import com.vti.testing.dto.DepartmentDTO;
-import com.vti.testing.entity.Account;
 import com.vti.testing.entity.Department;
-import com.vti.testing.form.AccountFilter;
-import com.vti.testing.form.DepartmentFilter;
+import com.vti.testing.filter.DepartmentFilter;
 import com.vti.testing.service.IDepartmentService;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
