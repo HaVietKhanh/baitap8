@@ -18,6 +18,8 @@ public class AccountDTO {
     private String userName;
     @NonNull
     private String fullName;
+    private String lastName;
+    private String firstName;
     @NonNull
     private Role role;
     @NonNull
