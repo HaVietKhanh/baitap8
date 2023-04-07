@@ -15,7 +15,7 @@ import javax.validation.constraints.Positive;
 public class UpdatingAccountForm {
     private int id;
     @NotBlank(message = "{Account.createAccount.form.username.NotBlank}")
-    @AccountUsernameNotExists
+//    @AccountUsernameNotExists
     private String userName;
 
     @NotBlank(message = "{Account.createAccount.form.username.NotBlank}")
